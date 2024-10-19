@@ -7,6 +7,7 @@ import jwt from "jsonwebtoken";
 export const isAdminAuthenticated = catchAsyncErrors(
   async (req, res, next) => {
     const token = req.cookies.adminToken;
+    console.log("token : " ,token)  
     if (!token) {
       return next(
         new ErrorHandler("Dashboard User is not authenticated!", 400)

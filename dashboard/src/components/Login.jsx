@@ -68,7 +68,19 @@ const Login = () => {
             onChange={(e) => setConfirmPassword(e.target.value)}
           />
           <div style={{ justifyContent: "center", alignItems: "center" }}>
-            <button type="submit">Login</button>
+            <button
+              type="submit"
+              style={{
+                transition: "all 0.2s ease-in-out",
+                ":active": {
+                  transform: "scale(0.5)",
+                  backgroundColor: "#007bff",
+                  borderColor: "#007bff"
+                }
+              }}
+            >
+              Login
+            </button>
           </div>
         </form>
       </section>
