@@ -14,7 +14,7 @@ config({ path: "./config.env" });
 
 app.use(
   cors({
-    origin: ["https://hospital-management-system-ruby.vercel.app", "https://hospital-management-system-ajqn.vercel.app"],
+    origin: [process.env.FRONTEND_URL_ONE, process.env.FRONTEND_URL_TWO],
     method: ["GET", "POST", "DELETE", "PUT"],
     credentials: true,
   })
